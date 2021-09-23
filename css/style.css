@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8rem;
+}
+:root {
+  --primary-color: rgb(103, 87, 198);
+  --secondary--color: #374151;
+  --hover--color: #434b59;
+  --bg--color: #fefefe;
+  --ternary-color: #f3f4f6;
+}
+body {
+  font-family: "Baloo Bhai 2", cursive;
+  background: var(--ternary-color);
+  color: var(--secondary--color);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1px 20px;
+  text-align: center;
+}
+.content {
+  padding: 30px 18px;
+
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  /* background-color: var(--bg--color); */
+
+  box-shadow: rgba(152, 152, 158, 0.2) 0px 7px 29px 0px;
+
+  border-radius: 50px;
+  margin: 14px auto;
+}
+/* utilities */
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--secondary--color);
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 8px 1px;
+}
+p {
+  font-size: 19px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: var(--secondary--color);
+  color: var(--ternary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  width: max-content;
+}
+.btn_opp {
+  background: var(--ternary-color);
+  color: var(--secondary--color);
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 5px;
+}
+.btn:hover {
+  box-shadow: rgb(0, 0, 0) 3px 3px 3px;
+  transform: scale(0.96);
+  background-color: var(--hover--color);
+}
+
+.current,
+i:hover {
+  color: var(--primary-color);
+  transform: scale(0.98);
+}
+
+#navbar {
+  padding: 10px 30px;
+}
+#navbar {
+  height: 70px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#navbar ul {
+  display: flex;
+  padding: 20px 10px;
+  align-items: center;
+  justify-content: center;
+}
+#navbar ul li {
+  margin: 10px;
+}
+#navbar ul li a {
+  font-size: 19px;
+}
+#navbar ul li a:hover {
+  border-bottom: 2px solid var(--primary-color);
+  transform: scale(0.9);
+}
+/* =================intro section=========================== */
+#hero {
+  margin-bottom: 80px;
+}
+#hero .container {
+  margin: auto;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  text-align: justify;
+}
+#right-content,
+#left-content {
+  width: 40%;
+}
+#right-content {
+  background-color: var(--primary-color);
+  border-radius: 92% 31% 79% 19%;
+  margin: 30px;
+  box-shadow: 2px 2px 6px 0px black;
+}
+
+#hero #right-content > img {
+  max-width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+}
+#hero #right-content img:hover {
+  transition: 0.6s;
+  transform: translateY(10px);
+}
+#hero #right-content:hover {
+  transition: 0.6s;
+  transform: translateY(-5px);
+}
+#handwave {
+  animation: waver 2.5s infinite;
+  /*what transform-origin does is that it will change the origin  */
+  /* here we are changing origin to a point which is 75% from left and 75% from top so tha we lock the bottom from moving while we wave */
+  transform-origin: 75% 75%;
+  /* we are adding inline-block so that the animation is withinn the element set properties */
+  display: inline-block;
+}
+@keyframes waver {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#threeSixty {
+  animation: rotateThreeSixty 4s linear infinite;
+}
+
+@keyframes rotateThreeSixty {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* ==using grid==
+#hero .container{
+  padding: 50px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+#hero #left-content>img{
+  max-width: 100%;
+} 
+<img style='height: 100%; width: 100%; object-fit: contain'/>---refer later */
+
+/* ==================skills section============== */
+#skills .container {
+  margin: auto;
+  padding: 11px 18px;
+  background-color: var(--ternary-color);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#skills .content {
+  display: flex;
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+}
+#skills .content i {
+  padding: 25px;
+}
+/*============== projects page ==============*/
+#break {
+  border-bottom: 2px solid var(--secondary--color);
+}
+
+.markHolder {
+  padding: 3px 7px;
+  margin-right: 8px;
+  border-bottom: 3px solid var(--primary-color);
+  border-radius: 10px;
+  font-size: small;
+  font-weight: 600;
+  text-align: center;
+  width: max-content;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+.markHolder:hover {
+  box-shadow: var(--primary-color) 3px 3px 3px;
+}
+.all_projects {
+  margin: 50px 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+}
+
+.card {
+  position: relative;
+  height: 400px;
+  width: 350px;
+  margin: 46px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px black;
+  transition: 0.3s;
+  padding: 66px 35px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-115px);
+  z-index: 2;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px black;
+}
+.card-content {
+  position: absolute;
+  left: 0;
+  padding: 10px 20px;
+  text-align: center;
+  transform: translateY(-218px);
+  transition: 0.3s;
+  opacity: 1;
+}
+/* ================blogs=============================== */
+
+.gif_anime {
+  width: 50%;
+  border-radius: 5px;
+}
+
+/* each-blog-page */
+.blog-page {
+  margin: 1rem;
+}
+.blog-page .container {
+  text-align: justify;
+  font-weight: 500;
+  max-width: 700px;
+}
+.blog-page img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.blog-page pre {
+  background-color: var(--secondary--color);
+  color: var(--secondary--color);
+  padding: 5px;
+  border-radius: 3px;
+  overflow-x: scroll;
+  box-shadow: rgba(255, 255, 255, 0.288) -2px -2px 2.6px;
+}
+/* ================footer=============================== */
+footer {
+  display: flex;
+  color: var(--secondary-color);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+footer div > * {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0px;
+  border-bottom: none;
+  flex-direction: row;
+  margin: 5px 10px;
+}
