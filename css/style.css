@@ -10,7 +10,8 @@
 }
 :root {
   --primary-color: rgb(103, 87, 198);
-  --secondary--color: #374151;
+  /* --secondary--color: #374151; */
+  --secondary--color: rgb(29, 29, 29);
   --hover--color: #434b59;
   --bg--color: #fefefe;
   --ternary-color: #f3f4f6;
