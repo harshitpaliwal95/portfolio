@@ -1,12 +1,10 @@
 function enableDark() {
   document.body.classList.add("dark_mode");
-  buttOn.setAttribute("src", "./images/sun.png");
   localStorage.setItem("darkmode", "enabled-state");
 }
 
 function disableDark() {
   document.body.classList.remove("dark_mode");
-  buttOn.setAttribute("src", "./images/moon.png");
   localStorage.setItem("darkmode", "disabled-state");
 }
 
